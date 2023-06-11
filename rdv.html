@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css"rel="stylesheet"/>
+        <title>Appointment</title>
+    </head>
+<body id="bcont">
+  <section id="head"> <!--on a utilisÃ© section pour mettre en                                                                                                                place le logo-->
+   <a href="Projet.html"><img src="doctor.jpg" class="logo" height="110"></a>
+    <div>
+     <ul id="barnav">
+        <li><a class="active" href="Projet.html">Home</a></li>
+        <li><a href="serv.html">Services</a></li>
+        <li><a href="doc.html">Doctors</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="app.html">Appointment</a></li>
+      </ul>
+    </div>
+  </section>
+  <div id="background">             
+    <form action="https://formsubmit.co/aymenbg8@gmail.com" method="post" id="fcont"> 
+      <div class="containercont">
+        <h1><STrong class="titcont">Appointment</STrong></h1>
+        <br>
+        <label for="fname">
+        </label>
+        Patient Name
+        <br>
+        <input type="text"  placeholder="Name.." required>
+        <br><br>
+        <label for="lname">
+        </label>
+        Contact
+        <br>
+        <input type="text"  placeholder="XX XXX XXX.."required>
+        <br><br>
+        <label for="lname">
+        </label>
+        Date
+        <br>
+        <input type="date"  required >
+        <br><br>
+        <label for="lname">
+        <form>
+          <label for="appt-time">
+            Time (opening hours 9:00 to 19:00):
+          </label>
+          <input id="appt-time" type="time" name="appt-time"/>
+        </form>
+        <br><br>
+        <input class="butcont" type="submit" value="Submit">
+        <br><br>
+    </form>
+  </div>
+</body>
+</html>

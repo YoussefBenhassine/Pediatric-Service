@@ -1,0 +1,679 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Home page*/
+#head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px; /* padding du haut et du bas 20px, de droite et de gauche 80px */
+    background-color: white;
+    box-shadow: 0 10px 15px transparent;
+    z-index: 999;       /*  Pour avoir une barre de navigation descandente au cour du scroll down       */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#barnav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#barnav li{
+    list-style: none;
+    padding: 0 20px;
+}
+#barnav li a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s ease;
+}
+#barnav li a:hover{
+    color: aqua;
+}
+#corps{
+    background-image: url("hero.jpg");
+    height: 75vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#corps h1{
+    padding-top: 10vh;
+    color: rgb(19, 55, 85);
+    font-size: 50px;
+}
+#corps p{
+    color: black;
+    font-size: 25px;
+}
+#corps button{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: white;
+    background-color: rgb(19, 55, 85);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+#corps button:hover{
+    background: rgb(88, 185, 153);
+    color: aliceblue;
+}
+#info{
+    display: flex;
+    justify-content: center;
+}
+#info h2{
+    font-size: 50px;
+}
+#doc{
+    display: flex;
+    padding-left: 10%;
+    padding-top: 30px;
+    margin-top: 10px;
+}
+#doc h3{
+    padding-left: 100px;
+    font-size: 40px;
+}
+#doc img{
+    width: 600px;
+    clip-path: circle();
+}
+#p1{
+    position: absolute;
+    left: 54%;
+    padding-top: 70px ;
+    margin-top: 20px;
+    font-size: 25px;
+    line-height: 40px;
+}
+#p2{
+    position: absolute;
+    left: 54%;
+    padding-top: 200px ;
+    margin-top: 30px;
+    font-size: 25px;
+    line-height: 40px;
+}
+#p3{
+    position: absolute;
+    left: 54%;
+    padding-top: 350px ;
+    margin-top: 30px;
+    font-size: 25px;
+    line-height: 40px;
+}
+#banner{
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(56, 146, 116);
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#banner h4{
+    font-size: 60px;
+    color: white;
+}
+#banner button{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+#banner button:hover{
+    background: rgb(88, 185, 153);
+    color: aliceblue;
+}
+.footer{
+    background-color: rgb(22, 50, 104) ;
+    padding-top: 20px;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.culumn{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col{
+    width: 30%;
+    padding: 0 15px;
+}
+.col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.col ul li a :hover{
+    color: white;
+    padding-left: 8px;
+}
+.icons{
+    list-style: none;
+}
+.icons li{
+    height: 150px;
+    width: 50px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+.icons li:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1; /* surposition des elements */
+    border-radius: 10%;
+    background: linear-gradient(45deg, #1a75ff, #ab28d7);
+    transition: all 0.3s ease-in;
+}
+.icons li:hover:before{
+    transform: rotate(360deg);
+    border-radius: 100%;
+}
+.icons li a span{
+    font-size: 27px;
+    line-height: 70px;
+    color: black;
+    transition: all 0.3s ease-out;
+}
+.icons li:hover a span{
+    transform: scale(1.2);
+}
+.point{
+    list-style: none;
+}
+/*page service*/
+#title{
+    background-color: rgb(22, 50, 104);
+}
+#title h2{
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    color: white;
+}
+#part1 p{
+    margin-left: 40px;
+    font-size: 25px;
+    padding: 10px;
+}
+#part1 #quest{
+    font-size: 40px;
+    font-weight: bold;
+    color:rgb(22, 50, 104);
+}
+#part1 ol{
+    list-style-type: circle;
+    padding: 10px;
+    margin-left: 80px;
+    font-size: 25px;
+}
+#part2 p{
+    margin-left: 40px;
+    font-size: 25px;
+    padding: 10px;
+}
+#part2 #quest2{
+    font-size: 40px;
+    font-weight: bold;
+    color:rgb(22, 50, 104);
+}
+#part2 ol{
+    list-style-type: circle;
+    padding: 10px;
+    margin-left: 80px;
+    font-size: 25px;
+}
+/*page appointement*/
+.body{ 
+    background-image: url("formm.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 25% right 0%;
+    padding: 0 80px;
+    display: flex;
+}
+.form{
+    position: absolute;
+    top: 63%;
+    left: 25%;
+    transform: translate(-50%, -50%); 
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.form h1{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+}
+.form form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%); /* permet de gerer l'espace entre le label el l'espace de saisie */
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.field span::before{  /* tracage de la ligne blue en dessous du label */
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(22, 50, 104);
+    transition: .5s;
+}
+.field input:focus ~ label, /* permet au label de changer de couleur si on click sur le label*/
+.field input:valid ~ label{
+    top: -5px;
+    color: rgb(22, 50, 104);
+}
+.field input:focus ~ span::before, /* tracage de la ligne blue en dessous du label */
+.field input:valid ~ span::before{
+    width: 100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+button[type="submit"]{
+    border: none;
+    background: rgb(22, 50, 104);
+    margin: 0px 30px 30px 0px;
+    padding: 12px 135px;
+    border-radius: 30px;
+    color:black;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+    text-decoration: none;
+}
+button[type="submit"]:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#takeme{
+    text-decoration: none;
+    color: black;
+}
+.link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+.link a{
+    color: rgb(22, 50, 104);
+    text-decoration: none;
+}
+.link a:hover{
+    text-decoration: underline;
+}
+/*page formulaire*/
+#contenuf{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+}
+#bform{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background-size: cover;
+}
+#formu{
+    width: 400px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 20px;
+}
+#formu h1{
+    color: rgb(22, 50, 104);
+    text-align: center;
+}
+#formu button{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: #f8f2e1;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
+#formu button:hover{
+    background-color: aqua;
+}
+.inputC{
+    display: flex;
+    flex-direction: column;
+}
+.inputC input{
+    border: 2px solid rgb(22, 50, 104);
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+.inputC input :focus{
+    outline: 0;
+
+}
+.inputC.success input{
+    border-color: #1a75ff;
+}
+.inputC.error input{
+    border-color: red;
+}
+.inputC .error{
+    color: red;
+    font-size: 9px;
+    height: 13px;
+}
+/*page FAQ*/
+.text{
+    font-size: 25PX;
+    text-align: left;
+    margin-left: 10CM;
+    margin-right: 7CM;
+    margin-top: 1CM;
+    margin-bottom: 1CM;
+
+ }
+.text1{
+    display: table-cell;
+    margin-left: 5CM;
+    width: fit-content;
+    margin-right: 10PX;
+    padding-left: 6PX
+   
+}
+.text2{
+    display: table-cell;
+    margin-right: 5CM;
+    padding-left: 6PX;
+}
+.text3{
+    display: table-cell;
+    padding-left: 10PX;
+}
+#a{
+
+    background-color: whitesmoke;
+}
+#aa{
+
+    background-image: url("docpp.png");
+    height: 350px;
+    background-size: 1920PX;
+}
+#b{
+    height: 400PX;
+    background-color: #f8f2e1;
+}
+#c{
+    height: 400PX;
+}
+#d{
+    height: 400PX;
+    background-color: #6890b7;
+    color: white;
+}
+#f{
+    height: 400PX;
+    background-color: #facb6f;
+}
+#g{
+    height: 350PX;
+}
+#e{
+    height: 400PX;
+}
+#h{
+    height: 400PX;
+    background-color: #facb6f;
+
+}
+.titre{
+    text-decoration: solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 46px;
+    line-height: 80px;
+    text-align: left;
+    text-transform: none;
+    margin-left: 4CM;
+    padding-top: 2CM;
+}
+#titre1{
+    padding-left: 10CM;
+}
+#a h2{
+    font-size: 40PX;
+}
+#b h2{
+    font-size: 40PX;
+}
+#c h2{
+    font-size: 40PX;
+}
+#d h2{
+    font-size: 40PX;
+}
+#e h2{
+    font-size: 40PX;
+}
+#f h2{
+    font-size: 40PX;
+}
+#g h2{
+    font-size: 40PX;
+}
+#h h2{
+    font-size: 40PX;
+}
+/*page DOCTORS*/
+.containerdoc {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 300PX;
+    width: fit-content;
+}
+.imagedoc {
+    opacity: 1;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%; 
+}
+#ayadi{
+    background-color: #f8f2e1;
+    padding-bottom: 5CM;
+    padding-top: 2cm;
+    padding-left: 5cm;
+}
+#haythem{
+    background-color: #6890b7;
+    padding-bottom: 5CM;
+    padding-top: 2cm;
+    padding-left: 5cm;
+}
+#FEDRA{
+    background-color: #f8f2e1;
+    padding-bottom: 5CM;
+    padding-top: 2cm;
+    padding-left: 5cm;
+}
+#imen{
+    background-color: whitesmoke;
+    padding-bottom: 5CM;
+    padding-top: 2cm;
+    padding-left: 5cm;
+}
+#Nadia{
+    background-color: #6890b7;
+    padding-bottom: 5CM;
+    padding-top: 2cm;
+    padding-left: 5cm;
+}
+#Questions{
+    background-image: url(docpp.png);
+    height: 350px;
+    background-size: 1920PX;
+}
+.titredoc{
+    text-decoration: solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 46px;
+    line-height: 80px;
+    text-align: left;
+    text-transform: none;
+    margin-left: 4CM;
+    padding-top: 2CM;
+}
+.docname{
+    padding-left: 1cm;
+    font-size:  50px;
+    font-style: bold ;
+}
+.listdoc{
+    font-size: 30PX;
+    padding-left: 5CM;
+}
+.about{
+    padding-left: 3cm;
+    font-size: 25px;
+}
+/*Contact-Us*/
+#bcont{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /*background costumized*/
+    background-size: cover;
+}
+#fcont{
+    width: 400px;
+    margin: 20vh auto 0 auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-bottom: 2CM;
+}
+#containercont{
+    text-align: left;
+}
+.containercont input{
+    height: 40px;
+    padding-right: 135PX ;
+    padding-bottom: 10PX;
+    font-size:15PX;
+    border: 2px solid rgb(22, 50, 104);
+    border-radius:5px;
+}
+.containercont textarea{  
+    padding-right: 4cm ;
+    height: fit-content;
+    font-size:15PX;
+    border-radius:5px;
+}
+#subject
+{
+    border: 2px solid rgb(22, 50, 104);
+
+}
+.butcont{
+    padding-left: 4cm;
+    background-color: rgb(41, 57, 194);
+    color: white;
+}
+.titcont{
+    color: rgb(22, 50, 104);
+    padding-left: 2CM;
+}
